@@ -1,0 +1,53 @@
+/*
+ * Shared styling for the public legal pages.
+ *
+ * Kept as one stylesheet rather than inlined per page so the two documents
+ * cannot drift apart visually, and so a reviewer opening either one recognises
+ * it as the same product.
+ */
+:root {
+  --night: #0a0c1b;
+  --surface: #111530;
+  --border: #1c2247;
+  --text: #f2f4ff;
+  --muted: #a8b0d8;
+  --teal: #4fe3c1;
+  --violet: #8b7cf6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 48px 20px 96px;
+}
+main { max-width: 720px; margin: 0 auto; }
+h1 { font-size: 30px; letter-spacing: -0.4px; margin: 0 0 6px; }
+h2 { font-size: 19px; margin: 40px 0 12px; color: var(--teal); letter-spacing: -0.2px; }
+h3 { font-size: 16px; margin: 24px 0 8px; color: var(--text); }
+.sub { color: var(--muted); margin: 0 0 8px; }
+.updated { color: #6b739b; font-size: 13px; }
+p, li { color: #cfd5f2; }
+a { color: var(--violet); }
+ul { padding-left: 20px; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 56px 0; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  vertical-align: top;
+}
+th { color: var(--muted); font-weight: 600; }
+.nav { margin-bottom: 32px; font-size: 14px; }
+.nav a { margin-right: 14px; }
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 20px 0;
+}
